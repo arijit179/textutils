@@ -56,7 +56,7 @@ function App() {
               <About mode = {mode} toogleBlue = {toogleBlue}/>
             </Route>
             <Route exact path="/textutils">
-              <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+              <TextForm showAlert={showAlert} heading="Try TextUtils - word counter,character counter,remove extra spaces" mode={mode} />
             </Route>
           </Switch>
         </div>
