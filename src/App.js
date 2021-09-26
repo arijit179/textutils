@@ -29,7 +29,7 @@ function App() {
       setMode('blue');
       document.body.style.backgroundColor = '#021633';
       showAlert("Blue mode has been enabled", "success");
-      document.title = "TextUtils - Dark Mode";
+      // document.title = "TextUtils - Dark Mode";
       // setInterval(() => {
       //   document.title = "TextUtils is amazing Mode";
       // }, 2000);
@@ -41,7 +41,7 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
-      document.title = "TextUtils - Light Mode";
+      // document.title = "TextUtils - Light Mode";
 
     }
   }
@@ -53,7 +53,7 @@ function App() {
         <div className="container my-3" >
           <Switch>
             <Route exact path="/about">
-              <About mode = {mode} toogleBlue = {toogleBlue}/>
+              <About mode = {mode}/>
             </Route>
             <Route exact path="/textutils">
               <TextForm showAlert={showAlert} heading="Try TextUtils - word counter,character counter,remove extra spaces" mode={mode} />
