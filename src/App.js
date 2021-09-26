@@ -55,7 +55,7 @@ function App() {
             <Route exact path="/about">
               <About mode = {mode} toogleBlue = {toogleBlue}/>
             </Route>
-            <Route exact path="/">
+            <Route exact path="/textutils">
               <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
             </Route>
           </Switch>
