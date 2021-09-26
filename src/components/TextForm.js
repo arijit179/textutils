@@ -36,20 +36,20 @@ export default function TextForm(props) {
     return (
         <>
             <div className="container" style = {{color : props.mode === 'blue'?'white':'black'}}>
-                <h1>{props.heading}</h1>
-                <div className="mb-3">
+                <h3 className = "my-3">{props.heading}</h3>
+                <div className="my-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style = {{backgroundColor : props.mode === 'blue'?'#434040':'white' , color : props.mode === 'blue'?'white':'black'}} id="myBox" rows="8"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={handleUpClick}>
                     Convert to Uppercase
                 </button>
-                <button type="submit" className="btn btn-primary m-2" onClick={handleLoClick}>
+                <button type="submit" className="btn btn-primary mx-2" onClick={handleLoClick}>
                     Convert to Lowercase
                 </button>
                 <button type="submit" className="btn btn-primary" onClick={handleClearClick}>
                     Clear Text
                 </button>
-                <button type="submit" className="btn btn-primary m-2" onClick={handleCopy}>
+                <button type="submit" className="btn btn-primary mx-2" onClick={handleCopy}>
                     Copy Text
                 </button>
                 <button type="submit" className="btn btn-primary" onClick={handleExtraSpaces}>
