@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function About(props) {
    let myStyle = {
-        backgroundColor : props.mode === 'blue'?'rgb(29 52 86)':'white' , 
-        color : props.mode === 'blue'?'white':'black'
+        backgroundColor : props.mode === 'dark'?'rgb(29 52 86)':'white' , 
+        color : props.mode === 'dark'?'white':'black'
     }
     // const [myStyle, setMyStyle] = useState({
     //     color: "black",
@@ -29,7 +29,7 @@ export default function About(props) {
     // }
     return (
         <div className = "container">
-            <h2 className = "my-3" style = {{color : props.mode === 'blue'?'white':'black'}}>About Us</h2>
+            <h2 className = "my-3" style = {{color : props.mode === 'dark'?'white':'black'}}>About Us</h2>
             <div className="accordion" id="accordionExample"  >
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">

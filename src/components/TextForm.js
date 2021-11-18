@@ -20,9 +20,7 @@ export default function TextForm(props) {
         props.showAlert("Text cleared" , "success");
     }
     const handleCopy = () => {
-        var text = document.getElementById('myBox');
-        text.select();
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(text);
         document.getSelection().removeAllRanges();
         props.showAlert("Text copied to clipboard" , "success");
     }
@@ -36,10 +34,10 @@ export default function TextForm(props) {
     }
     return (
         <>
-            <div className="container" style = {{color : props.mode === 'blue'?'white':'black'}}>
+            <div className="container" style = {{color : props.mode === 'dark'?'white':'black'}}>
                 <h3 className = "mb-3">{props.heading}</h3>
                 <div className="my-3">
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style = {{backgroundColor : props.mode === 'blue'?'rgb(29 52 86)':'white' , color : props.mode === 'blue'?'white':'black'}} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style = {{backgroundColor : props.mode === 'dark'?'rgb(29 52 86)':'white' , color : props.mode === 'dark'?'white':'black'}} id="myBox" rows="8"></textarea>
                 </div>
                 <button disabled = {text.length===0} type="submit" className="btn btn-primary" onClick={handleUpClick}>
                     Convert to Uppercase
@@ -57,9 +55,9 @@ export default function TextForm(props) {
                     Remove extra spaces
                 </button>
             </div>
-            <div className="container" style = {{color : props.mode === 'blue'?'white':'black'}}>
+            <div className="container" style = {{color : props.mode === 'dark'?'white':'black'}}>
                 <h2 className = "my-3">Your text summary</h2>
-                <p className = "my-3">{text.split(' ').filter((elem)=>{return elem.length!==0}).length} words and {text.length} characters</p>
+                <p className = "my-3">{text.split(/\s+/).filter((elem)=>{return elem.length!==0}).length} words and {text.length} characters</p>
                 <p className = "my-3">{0.008 * text.split(' ').filter((elem)=>{return elem.length!==0}).length} Minutes to read</p>
                 <h3 className = "my-3">Preview</h3>
                 <p className = "my-3">{text.length>0?text:"Nothing to Preview"}</p>
